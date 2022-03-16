@@ -7,20 +7,21 @@ using Photon.Realtime;
 public class VirtualWorldManager : MonoBehaviourPunCallbacks
 {
 
-    public static VirtualWorldManager instance;
+    public static VirtualWorldManager Instance;
 
     #region UnityMethods
 
     private void Awake()
     {
         //singleton implementation = allows us to access method and classes from outside the scripts.
-        if (instance != null && instance != this)
+        if (Instance != null && Instance != this)
         {
 
             Destroy(this.gameObject);
+            return;
 
         }
-        instance = this;
+        Instance = this;
 
     }
 

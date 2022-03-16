@@ -16,18 +16,6 @@ public class PlayerNetworkingSetup : MonoBehaviourPunCallbacks
     private void Awake()
     {
 
-        AwakeCaller();
-
-    }
-
-    private void Update()
-    {
-
-    }
-
-    void AwakeCaller()
-    {
-
         //will tell us if this instantiate player is us or not
         if (photonView.IsMine)
         {
@@ -63,6 +51,12 @@ public class PlayerNetworkingSetup : MonoBehaviourPunCallbacks
         }
 
     }
+
+    private void Update()
+    {
+
+    }
+
 
     void SetLayerRecursively(GameObject go, int layerNumber)
     {

@@ -12,7 +12,7 @@ public class LocalPlayerGameManager : MonoBehaviour
     private void Awake()
     {
 
-        goHomeButton.GetComponent<Button>().onClick.AddListener(VirtualWorldManager.instance.LeaveRoomAndLoadScene);
+        goHomeButton.GetComponent<Button>().onClick.AddListener(VirtualWorldManager.Instance.LeaveRoomAndLoadScene);
 
     }
 
