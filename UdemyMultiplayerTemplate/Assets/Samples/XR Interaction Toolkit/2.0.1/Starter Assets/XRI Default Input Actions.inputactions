@@ -220,6 +220,17 @@
                     "action": "Switch UI",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "49ef51ce-532c-4c1f-92a2-1ff13be7388c",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch UI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
