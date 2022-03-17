@@ -62,3 +62,30 @@ public class RoomManagerEditor : Editor
 }
 
 #endregion
+
+
+#region ButtonBackToHome
+
+[CustomEditor(typeof(LocalPlayerGameManager))]
+public class LocalPlayerGameManagerEditor : Editor
+{
+
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector();
+        EditorGUILayout.HelpBox("This Script is responsible for button back action to home menu.", MessageType.Info);
+
+        LocalPlayerGameManager lPGM = (LocalPlayerGameManager)target;
+
+        if (GUILayout.Button("Back to Home Scene"))
+        {
+
+            lPGM.ButtonAction();
+
+        }
+
+    }
+
+}
+
+#endregion

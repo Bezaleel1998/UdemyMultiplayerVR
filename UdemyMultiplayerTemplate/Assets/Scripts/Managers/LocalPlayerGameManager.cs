@@ -7,12 +7,28 @@ public class LocalPlayerGameManager : MonoBehaviour
 {
 
     [SerializeField]
-    GameObject goHomeButton;
+    private GameObject goHomeButton;
+    [SerializeField]
+    private VirtualWorldManager vWM;
 
     private void Awake()
     {
 
-        goHomeButton.GetComponent<Button>().onClick.AddListener(VirtualWorldManager.Instance.LeaveRoomAndLoadScene);
+        if (vWM == null)
+        {
+
+            vWM = GameObject.FindGameObjectWithTag("VirtualWorldManager").GetComponent<VirtualWorldManager>();
+            ButtonAction();
+
+        }
+
+    }
+
+
+    public void ButtonAction()
+    {
+
+        goHomeButton.GetComponent<Button>().onClick.AddListener(vWM.LeaveRoomAndLoadScene);
 
     }
 

@@ -7,21 +7,16 @@ using Photon.Realtime;
 public class VirtualWorldManager : MonoBehaviourPunCallbacks
 {
 
-    public static VirtualWorldManager Instance;
+    //private static VirtualWorldManager _instance;
+
+    //public static VirtualWorldManager Instance { get { return _instance; } }
 
     #region UnityMethods
 
     private void Awake()
     {
-        //singleton implementation = allows us to access method and classes from outside the scripts.
-        if (Instance != null && Instance != this)
-        {
 
-            Destroy(this.gameObject);
-            return;
-
-        }
-        Instance = this;
+        //VirtualWorldManagerInstance();
 
     }
 
@@ -31,6 +26,28 @@ public class VirtualWorldManager : MonoBehaviourPunCallbacks
         PhotonNetwork.LeaveRoom();
 
     }
+
+    #endregion
+
+    #region Singleton Implementation (Unused)
+
+    /*void VirtualWorldManagerInstance()
+    {
+        //singleton implementation = allows us to access method and classes from outside the scripts.
+        if (_instance != null && _instance != this)
+        {
+
+            Destroy(this.gameObject);
+            //return;
+
+        }
+        else
+        {
+
+            _instance = this;
+
+        }
+    }*/
 
     #endregion
 
@@ -51,6 +68,7 @@ public class VirtualWorldManager : MonoBehaviourPunCallbacks
     public override void OnDisconnected(DisconnectCause cause)
     {
         PhotonNetwork.LoadLevel("HomeScene");
+        Debug.Log(PhotonNetwork.NickName + " has left the room " + "Player Count: " + PhotonNetwork.CurrentRoom.PlayerCount);
     }
 
     #endregion
