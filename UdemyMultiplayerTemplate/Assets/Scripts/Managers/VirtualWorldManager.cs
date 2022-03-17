@@ -68,7 +68,6 @@ public class VirtualWorldManager : MonoBehaviourPunCallbacks
     public override void OnDisconnected(DisconnectCause cause)
     {
         PhotonNetwork.LoadLevel("HomeScene");
-        Debug.Log(PhotonNetwork.NickName + " has left the room " + "Player Count: " + PhotonNetwork.CurrentRoom.PlayerCount);
     }
 
     #endregion
