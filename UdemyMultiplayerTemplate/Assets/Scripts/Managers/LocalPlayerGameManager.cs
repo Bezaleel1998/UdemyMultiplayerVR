@@ -11,24 +11,16 @@ public class LocalPlayerGameManager : MonoBehaviour
     [SerializeField]
     private VirtualWorldManager vWM;
 
-    private void Awake()
+    public void Awake()
     {
 
         if (vWM == null)
         {
 
             vWM = GameObject.FindGameObjectWithTag("VirtualWorldManager").GetComponent<VirtualWorldManager>();
-            ButtonAction();
+            goHomeButton.GetComponent<Button>().onClick.AddListener(vWM.LeaveRoomAndLoadScene);
 
         }
-
-    }
-
-
-    public void ButtonAction()
-    {
-
-        goHomeButton.GetComponent<Button>().onClick.AddListener(vWM.LeaveRoomAndLoadScene);
 
     }
 

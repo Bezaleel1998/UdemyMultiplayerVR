@@ -80,7 +80,7 @@ public class LocalPlayerGameManagerEditor : Editor
         if (GUILayout.Button("Back to Home Scene"))
         {
 
-            lPGM.ButtonAction();
+            lPGM.Awake();
 
         }
 

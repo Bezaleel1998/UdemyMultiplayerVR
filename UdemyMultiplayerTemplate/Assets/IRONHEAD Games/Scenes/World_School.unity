@@ -279,9 +279,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 656429659013204165, guid: 9812035d235f4084f98103f0ac2d3fc2, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 783650955877457777, guid: 9812035d235f4084f98103f0ac2d3fc2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896635889934727923, guid: 9812035d235f4084f98103f0ac2d3fc2, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3714931714112757281, guid: 9812035d235f4084f98103f0ac2d3fc2, type: 3}
       propertyPath: m_Name
@@ -310,6 +318,10 @@ PrefabInstance:
     - target: {fileID: 4671057176309441760, guid: 9812035d235f4084f98103f0ac2d3fc2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5809877549761798444, guid: 9812035d235f4084f98103f0ac2d3fc2, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5867731428958914764, guid: 9812035d235f4084f98103f0ac2d3fc2, type: 3}
       propertyPath: m_Layer
@@ -382,7 +394,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 4
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -518,7 +530,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 3
 --- !u!114 &216770823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,7 +549,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 4
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -673,7 +685,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 3
 --- !u!114 &216770825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -692,7 +704,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 4
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -788,7 +800,7 @@ MonoBehaviour:
   m_SmoothPositionAmount: 5
   m_TightenPosition: 0.5
   m_TrackRotation: 1
-  m_SmoothRotation: 0
+  m_SmoothRotation: 1
   m_SmoothRotationAmount: 5
   m_TightenRotation: 0.5
   m_ThrowOnDetach: 1
@@ -828,46 +840,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
---- !u!65 &216770827
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216770818}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.043902062, y: 0.043902054, z: 0.043902062}
-  m_Center: {x: -0.0000010728836, y: 0, z: 0.00000023841858}
---- !u!65 &216770828
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216770819}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.20383973, y: 0.014429632, z: 0.3511508}
-  m_Center: {x: -0.0000009543938, y: 0, z: -0.11292741}
---- !u!65 &216770829
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216770820}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.20383973, y: 0.014429632, z: 0.34821734}
-  m_Center: {x: -0.0000009543065, y: 0, z: -0.11439367}
+  m_CollisionDetection: 3
 --- !u!114 &216770830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,6 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c2795f5c3cd1b45a854b10f816a2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_photonView: {fileID: 216770834}
 --- !u!114 &216770831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -892,6 +866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c2795f5c3cd1b45a854b10f816a2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_photonView: {fileID: 216770836}
 --- !u!114 &216770832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -904,6 +879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c2795f5c3cd1b45a854b10f816a2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_photonView: {fileID: 216770838}
 --- !u!114 &216770833
 MonoBehaviour:
   m_ObjectHideFlags: 0
