@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.XR.Interaction.Toolkit;
+using TMPro;
 
 public class PlayerNetworkingSetup : MonoBehaviourPunCallbacks
 {
 
     public GameObject localXROrigin;
+    public GameObject mainAvatarGameObject;
     public GameObject AvatarHeadGameObject;
     public GameObject AvatarBodyGameObject;
 
     public GameObject[] AvatarModelPrefabs;
+
+    [SerializeField] private TMP_Text playerName;
 
     #region UnityMethods
 
@@ -50,6 +54,8 @@ public class PlayerNetworkingSetup : MonoBehaviourPunCallbacks
 
             }
 
+            mainAvatarGameObject.AddComponent<AudioListener>();
+
         }
         else
         {
@@ -58,6 +64,13 @@ public class PlayerNetworkingSetup : MonoBehaviourPunCallbacks
             localXROrigin.SetActive(false);
             SetLayerRecursively(AvatarHeadGameObject, 0);
             SetLayerRecursively(AvatarBodyGameObject, 0);
+
+        }
+
+        if (playerName.text != null)
+        {
+
+            playerName.text = photonView.Owner.NickName;
 
         }
 
