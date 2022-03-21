@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.XR.Interaction.Toolkit;
 
 
 public class SpawnManager : MonoBehaviour
@@ -11,6 +12,9 @@ public class SpawnManager : MonoBehaviour
     private GameObject genericVRPlayerPrefab;
     [SerializeField]
     private GameObject spawnPosition;
+    [SerializeField]
+    private TeleportationArea areaTeleportation;
+
 
     private void Awake()
     {
@@ -18,6 +22,7 @@ public class SpawnManager : MonoBehaviour
         if (PhotonNetwork.IsConnectedAndReady)
         {
             PhotonNetwork.Instantiate(genericVRPlayerPrefab.name, spawnPosition.transform.position, Quaternion.identity);
+            areaTeleportation.teleportationProvider = genericVRPlayerPrefab.transform.Find("XR Origin").GetComponent<TeleportationProvider>();
         }
 
     }

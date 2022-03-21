@@ -3654,6 +3654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   genericVRPlayerPrefab: {fileID: 987240627333450471, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
   spawnPosition: {fileID: 335649083}
+  areaTeleportation: {fileID: 560954052}
 --- !u!1001 &357888489
 PrefabInstance:
   m_ObjectHideFlags: 0

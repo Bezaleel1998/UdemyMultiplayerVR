@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit.Inputs;
 
 public class LocalPlayerGameManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class LocalPlayerGameManager : MonoBehaviour
     private GameObject goHomeButton;
     [SerializeField]
     private VirtualWorldManager vWM;
+    [SerializeField]
+    private InputActionManager xRIM;
 
     public void Awake()
     {
@@ -21,6 +24,8 @@ public class LocalPlayerGameManager : MonoBehaviour
             goHomeButton.GetComponent<Button>().onClick.AddListener(vWM.LeaveRoomAndLoadScene);
 
         }
+
+        xRIM = GameObject.FindGameObjectWithTag("InputActionManager").GetComponent<InputActionManager>();
 
     }
 
