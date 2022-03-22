@@ -6430,7 +6430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: fc0025812d3071d4dbdfd0841ba9d308, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: fc0025812d3071d4dbdfd0841ba9d308, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11673,6 +11673,95 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4569666047380132084, guid: 630c0ce5de5ace9449e989865387e43b, type: 3}
   m_PrefabInstance: {fileID: 102123408}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1014353693
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 987240627333450468, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 987240627333450468, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -31.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 987240627333450468, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 987240627333450468, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 987240627333450468, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 987240627333450468, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987240627333450468, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987240627333450468, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987240627333450468, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987240627333450468, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987240627333450468, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987240627333450471, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: m_Name
+      value: GenericVRPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 987240627333450471, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2259488225014826886, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1972848229}
+    - target: {fileID: 3119787432864127813, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1972848229}
+    - target: {fileID: 6512487051242381370, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 1972848229}
+    - target: {fileID: 6558167155089725979, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: iAM
+      value: 
+      objectReference: {fileID: 425302144}
+    - target: {fileID: 6558167155089725979, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: vWM
+      value: 
+      objectReference: {fileID: 329034593}
+    - target: {fileID: 6558167155089725979, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: xRIM
+      value: 
+      objectReference: {fileID: 1972848229}
+    - target: {fileID: 7116046518278340037, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
+      propertyPath: sceneViewId
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 166f14c6ca157f84ba712fed034843c3, type: 3}
 --- !u!1001 &1024501678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21487,7 +21576,7 @@ GameObject:
   - component: {fileID: 1972848229}
   m_Layer: 0
   m_Name: XR Interaction Manager
-  m_TagString: Untagged
+  m_TagString: XRInteractionManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

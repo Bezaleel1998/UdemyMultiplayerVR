@@ -22,7 +22,7 @@ public class SpawnManager : MonoBehaviour
         if (PhotonNetwork.IsConnectedAndReady)
         {
             PhotonNetwork.Instantiate(genericVRPlayerPrefab.name, spawnPosition.transform.position, Quaternion.identity);
-            areaTeleportation.teleportationProvider = genericVRPlayerPrefab.transform.Find("XR Origin").GetComponent<TeleportationProvider>();
+            areaTeleportation.teleportationProvider = GameObject.FindGameObjectWithTag("Player").GetComponent<TeleportationProvider>();
         }
 
     }

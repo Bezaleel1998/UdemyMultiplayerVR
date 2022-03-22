@@ -478,7 +478,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 216770827}
   m_AttachEaseInTime: 0.15
   m_MovementType: 2
   m_VelocityDamping: 1
@@ -633,7 +633,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 216770828}
   m_AttachEaseInTime: 0.15
   m_MovementType: 2
   m_VelocityDamping: 1
@@ -788,7 +788,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 216770829}
   m_AttachEaseInTime: 0.15
   m_MovementType: 2
   m_VelocityDamping: 1
@@ -841,6 +841,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!4 &216770827 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8541556183605991155, guid: 9812035d235f4084f98103f0ac2d3fc2, type: 3}
+  m_PrefabInstance: {fileID: 216770817}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &216770828 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1139281390657245369, guid: 9812035d235f4084f98103f0ac2d3fc2, type: 3}
+  m_PrefabInstance: {fileID: 216770817}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &216770829 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6229399632695556432, guid: 9812035d235f4084f98103f0ac2d3fc2, type: 3}
+  m_PrefabInstance: {fileID: 216770817}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &216770830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -997,6 +1012,45 @@ MonoBehaviour:
   sceneViewId: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!65 &216770839
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216770820}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.20383973, y: 0.015074849, z: 0.21815926}
+  m_Center: {x: -0.00000095043043, y: -0.00048154593, z: -0.1794227}
+--- !u!65 &216770840
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216770819}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.20383973, y: 0.014429632, z: 0.21815924}
+  m_Center: {x: -0.0000009536743, y: 0, z: -0.17942318}
+--- !u!65 &216770841
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216770818}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.043902062, y: 0.043902054, z: 0.043902062}
+  m_Center: {x: -0.0000010728836, y: 0, z: 0.00000023841858}
 --- !u!64 &229647753
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1841,7 +1895,7 @@ GameObject:
   - component: {fileID: 1014354143}
   m_Layer: 0
   m_Name: XR Interaction Manager
-  m_TagString: Untagged
+  m_TagString: XRInteractionManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

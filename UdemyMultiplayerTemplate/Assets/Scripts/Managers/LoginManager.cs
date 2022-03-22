@@ -11,6 +11,8 @@ public class LoginManager : MonoBehaviourPunCallbacks
     [Header("UISystem")]
     public TMP_InputField playerInputName;
 
+    private TouchScreenKeyboard keyboard;
+
     #region Unity Methods
 
     void Awake()
@@ -31,6 +33,16 @@ public class LoginManager : MonoBehaviourPunCallbacks
     #endregion
 
     #region UI Callback Method
+
+
+    public void KeyboardCaller()
+    {
+
+        keyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default);
+        keyboard.active = true;
+        Debug.Log("Keyboard has been Actived.");
+
+    }
 
     public void ConnectAnonymously()
     {

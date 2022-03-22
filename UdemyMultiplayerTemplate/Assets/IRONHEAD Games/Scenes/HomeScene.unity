@@ -4312,10 +4312,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5610789577198129628, guid: 06e313609507b544bb1072ea74d7b74d, type: 3}
+      propertyPath: m_MoveSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5610789577634241417, guid: 06e313609507b544bb1072ea74d7b74d, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1377789842}
+    - target: {fileID: 5610789577634241417, guid: 06e313609507b544bb1072ea74d7b74d, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 4294967282
+      objectReference: {fileID: 0}
     - target: {fileID: 5610789578039458653, guid: 06e313609507b544bb1072ea74d7b74d, type: 3}
       propertyPath: m_InteractionManager
       value: 

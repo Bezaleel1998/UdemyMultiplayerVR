@@ -152,8 +152,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2073399190}
+  m_Children: []
   m_Father: {fileID: 1369177205}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1946,7 +1945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2034958403
 Transform:
   m_ObjectHideFlags: 0
@@ -1975,7 +1974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyboard: {fileID: 2073399187}
   localVRPlayerCamera: {fileID: 209616543}
-  relativePosition: {x: 0, y: 1, z: 2}
+  relativePosition: {x: 0, y: 2, z: -2.5}
   playerNameInputField: {fileID: 4259889453711408095}
   leftMarret: {fileID: 2073399189}
   rightMarret: {fileID: 2073399188}
@@ -1986,7 +1985,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 209616544}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1000010145710606, guid: f28287b1c722ebd4aa4f4d8547ed7fa8, type: 3}
       propertyPath: m_IsActive
@@ -2022,7 +2021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013025176432, guid: f28287b1c722ebd4aa4f4d8547ed7fa8, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4000013025176432, guid: f28287b1c722ebd4aa4f4d8547ed7fa8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2030,11 +2029,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013025176432, guid: f28287b1c722ebd4aa4f4d8547ed7fa8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.547
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000013025176432, guid: f28287b1c722ebd4aa4f4d8547ed7fa8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000013025176432, guid: f28287b1c722ebd4aa4f4d8547ed7fa8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2142,11 +2141,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114000011813929276, guid: f28287b1c722ebd4aa4f4d8547ed7fa8, type: 3}
       propertyPath: positionRelativeToUser.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000011813929276, guid: f28287b1c722ebd4aa4f4d8547ed7fa8, type: 3}
       propertyPath: positionRelativeToUser.z
-      value: -2.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000011935164620, guid: f28287b1c722ebd4aa4f4d8547ed7fa8, type: 3}
       propertyPath: m_hasFontAssetChanged
@@ -2201,11 +2200,6 @@ GameObject:
 --- !u!1 &2073399189 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000012940491476, guid: f28287b1c722ebd4aa4f4d8547ed7fa8, type: 3}
-  m_PrefabInstance: {fileID: 2073399186}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2073399190 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013025176432, guid: f28287b1c722ebd4aa4f4d8547ed7fa8, type: 3}
   m_PrefabInstance: {fileID: 2073399186}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1243536138604600693
@@ -3706,9 +3700,9 @@ MonoBehaviour:
   m_OnSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2034958404}
-        m_TargetAssemblyTypeName: VRKeyboardManager, Assembly-CSharp
-        m_MethodName: EnableVRKeyboard
+      - m_Target: {fileID: 1969031125}
+        m_TargetAssemblyTypeName: LoginManager, Assembly-CSharp
+        m_MethodName: KeyboardCaller
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

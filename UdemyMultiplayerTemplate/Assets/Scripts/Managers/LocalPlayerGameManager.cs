@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit.Inputs;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class LocalPlayerGameManager : MonoBehaviour
 {
@@ -12,7 +13,14 @@ public class LocalPlayerGameManager : MonoBehaviour
     [SerializeField]
     private VirtualWorldManager vWM;
     [SerializeField]
-    private InputActionManager xRIM;
+    private InputActionManager iAM;
+    [SerializeField]
+    private XRInteractionManager xRIM;
+
+    [SerializeField]
+    private XRDirectInteractor[] baseHandDirInteractor;
+    [SerializeField]
+    private XRRayInteractor[] rayHandInteractor;
 
     public void Awake()
     {
@@ -25,7 +33,17 @@ public class LocalPlayerGameManager : MonoBehaviour
 
         }
 
-        xRIM = GameObject.FindGameObjectWithTag("InputActionManager").GetComponent<InputActionManager>();
+        iAM = GameObject.FindGameObjectWithTag("InputActionManager").GetComponent<InputActionManager>();
+
+        xRIM = GameObject.FindGameObjectWithTag("XRInteractionManager").GetComponent<XRInteractionManager>();
+
+        for (int i = 0; i < baseHandDirInteractor.Length; i++)
+        {
+
+            baseHandDirInteractor[i].interactionManager = xRIM;
+            rayHandInteractor[i].interactionManager = xRIM;
+
+        }
 
     }
 

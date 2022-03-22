@@ -8,6 +8,7 @@ TagManager:
   - VirtualWorldManager
   - Floor
   - InputActionManager
+  - XRInteractionManager
   layers:
   - Default
   - TransparentFX
