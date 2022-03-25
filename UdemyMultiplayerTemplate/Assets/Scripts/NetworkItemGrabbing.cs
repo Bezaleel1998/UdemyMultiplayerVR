@@ -57,24 +57,24 @@ public class NetworkItemGrabbing : MonoBehaviourPunCallbacks, IPunOwnershipCallb
 
     #region Selected Object / Item
 
-    public void OnSelectedEnter()
+    public void OnSelectEntered()
     {
 
         Debug.Log("Grabbed");
         m_photonView.RPC("StartNetworkGrabbing", RpcTarget.AllBuffered);
 
-        if (m_photonView.Owner != PhotonNetwork.LocalPlayer)
+        if (m_photonView.Owner == PhotonNetwork.LocalPlayer)
         {
-            TransferOwnership();
+            Debug.Log("<color=lime>We don't need to request ownership again. Already mine.</color>");
         }
         else
         {
-            Debug.Log("<color=lime>We don't need to request ownership again. Already mine.</color>");
-        }        
-
+            TransferOwnership();
+        }
+        
     }
 
-    public void OnSelectedExit()
+    public void OnSelectedExited()
     {
         Debug.Log("Released");
         m_photonView.RPC("StopNetworkGrabbing", RpcTarget.AllBuffered);
@@ -98,11 +98,9 @@ public class NetworkItemGrabbing : MonoBehaviourPunCallbacks, IPunOwnershipCallb
         {
             return; // for differentiate beetween the object / item
         }
-        else
-        {
-            Debug.Log("<color=magenta>Ownership for : " + targetView.name + " Requested From " + requestingPlayer.NickName);
-            photonView.TransferOwnership(requestingPlayer);
-        }    
+
+        Debug.Log("<color=magenta>Ownership for : " + targetView.name + " Requested From " + requestingPlayer.NickName);
+        m_photonView.TransferOwnership(requestingPlayer);
 
     }
 

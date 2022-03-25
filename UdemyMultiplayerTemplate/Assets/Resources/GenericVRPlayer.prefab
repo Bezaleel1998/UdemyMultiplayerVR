@@ -1972,9 +1972,9 @@ GameObject:
   - component: {fileID: 6274599018741225241}
   - component: {fileID: 4957013177367280255}
   - component: {fileID: 7414809863061048466}
-  - component: {fileID: 2803988907402972903}
   - component: {fileID: 7980388611400265036}
   - component: {fileID: 5994972750369999004}
+  - component: {fileID: 2803988907402972903}
   - component: {fileID: 5302007841522216953}
   m_Layer: 10
   m_Name: XR Origin
@@ -2051,19 +2051,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Timeout: 10
   m_XROrigin: {fileID: 6274599018741225241}
---- !u!114 &2803988907402972903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7252418604744124937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_System: {fileID: 7414809863061048466}
 --- !u!114 &7980388611400265036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2077,7 +2064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 7414809863061048466}
-  m_MoveSpeed: 10
+  m_MoveSpeed: 5
   m_EnableStrafe: 1
   m_UseGravity: 1
   m_GravityApplicationMode: 0
@@ -2144,6 +2131,19 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &2803988907402972903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7252418604744124937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 7414809863061048466}
 --- !u!143 &5302007841522216953
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2859,7 +2859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 930434389981890416, guid: 5d3b2bba162735e43ac4c2827ae49385, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0
+      value: -0.306
       objectReference: {fileID: 0}
     - target: {fileID: 930434389981890416, guid: 5d3b2bba162735e43ac4c2827ae49385, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

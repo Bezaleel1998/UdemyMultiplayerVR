@@ -34,16 +34,6 @@ public class LoginManager : MonoBehaviourPunCallbacks
 
     #region UI Callback Method
 
-
-    public void KeyboardCaller()
-    {
-
-        keyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default);
-        keyboard.active = true;
-        Debug.Log("Keyboard has been Actived.");
-
-    }
-
     public void ConnectAnonymously()
     {
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using RoomManagerScenes;
 
 #region LOGIN_MANAGER_EDITOR
 
@@ -83,6 +84,24 @@ public class LocalPlayerGameManagerEditor : Editor
             lPGM.Awake();
 
         }
+
+    }
+
+}
+
+#endregion
+
+#region TeleportingSystemScript
+
+[CustomEditor(typeof(TeleportingSystem))]
+public class TeleportingSystemEditor : Editor
+{
+
+    public override void OnInspectorGUI()
+    {
+
+        DrawDefaultInspector();
+        EditorGUILayout.HelpBox("This Scripts is reponsible for triggering teleport of the player", MessageType.Info);
 
     }
 
