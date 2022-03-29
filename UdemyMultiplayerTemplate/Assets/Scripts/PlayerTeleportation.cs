@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using PhotonPunVR.TeleportingSystem;
 using Photon.Pun;
 using Photon.Realtime;
 
@@ -9,14 +8,19 @@ public class PlayerTeleportation : MonoBehaviour
 {
 
     [SerializeField]
-    private TeleportingSystem teleportManager;
-    [SerializeField]
     private GameObject cloneGeneralXRPrefabs;
+
+    private int thisPlayerID;
+    [SerializeField]
+    private PhotonView photonPunView;
+
+    [SerializeField]
+    internal string[] sceneNames;
 
     private void Awake()
     {
 
-        teleportManager = GameObject.FindGameObjectWithTag("TeleportSystemManager").GetComponent<TeleportingSystem>();
+        thisPlayerID = photonPunView.ViewID;
 
     }
 
@@ -24,7 +28,10 @@ public class PlayerTeleportation : MonoBehaviour
     {
 
         //Debug.Log("Something Touching player : " + other.tag);
-        TargetTeleportScene(other.tag);
+        if (thisPlayerID == photonPunView.ViewID)
+        {
+            TargetTeleportScene(other.tag);
+        }
 
     }
 
@@ -34,20 +41,30 @@ public class PlayerTeleportation : MonoBehaviour
         switch (sceneTag)
         {
             case "schoolRoomScene":
-                Debug.Log("Load School Scene");
+                Debug.Log("Load School Scene, player id : " + thisPlayerID + " has change scene");
 
-                //teleportManager.OnEnterButtonClicked_School();
-                teleportManager.LoadArena(teleportManager.sceneNames[1]);                
+                LoadArena(sceneNames[1]);                
                 
                 break;
             case "outDoorScene":
-                Debug.Log("Load OutDoor Scene");
+                Debug.Log("Load OutDoor Scene, player id : " + thisPlayerID + " has change scene");
 
-                //teleportManager.OnEnterButtonClicked_Outdoor();
-                teleportManager.LoadArena(teleportManager.sceneNames[0]);
+                LoadArena(sceneNames[0]);
                 
                 break;
         }
+
+    }
+
+    public void LoadArena(string sceneName)
+    {
+
+        if (!PhotonNetwork.IsMasterClient)
+        {
+            return;
+        }
+
+        PhotonNetwork.LoadLevel(sceneName);
 
     }
 

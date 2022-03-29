@@ -2190,8 +2190,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1fad060e1ccd7f4788f7817663646ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportManager: {fileID: 0}
   cloneGeneralXRPrefabs: {fileID: 987240627333450471}
+  photonPunView: {fileID: 7116046518278340037}
+  sceneNames:
+  - World_Outdoor
+  - World_School
 --- !u!1 &7277161284332709497
 GameObject:
   m_ObjectHideFlags: 0
