@@ -60,6 +60,7 @@ namespace RoomManagerScenes
 
         public void OnEnterButtonClicked_Outdoor()
         {
+
             mapType = MultiplayerVRConstants.MAP_TYPE_VALUE_OUTDOOR;
             ExitGames.Client.Photon.Hashtable expectedCustomRoomProperties = new ExitGames.Client.Photon.Hashtable() { { MultiplayerVRConstants.MAP_TYPE_KEY, mapType } };
             PhotonNetwork.JoinRandomRoom(expectedCustomRoomProperties, 0);
@@ -89,7 +90,8 @@ namespace RoomManagerScenes
 
         public override void OnConnectedToMaster()
         {
-            Debug.Log("Connected to the server again.");
+            Debug.Log("<color=lime>Connected to the Master server again.</color>");
+            Debug.Log("Server IP: " + PhotonNetwork.ServerAddress);
             PhotonNetwork.JoinLobby();
         }
 
@@ -138,7 +140,7 @@ namespace RoomManagerScenes
         public override void OnPlayerEnteredRoom(Player newPlayer)
         {
 
-            Debug.Log(PhotonNetwork.NickName + " is joined to room " + "Player Count: " + PhotonNetwork.CurrentRoom.PlayerCount);
+            Debug.Log(newPlayer.NickName + " is joined to room " + "Player Count: " + PhotonNetwork.CurrentRoom.PlayerCount);
 
         }
 
@@ -178,6 +180,13 @@ namespace RoomManagerScenes
         public override void OnJoinedLobby()
         {
             Debug.Log("Joined the lobby");
+        }
+
+        public override void OnDisconnected(DisconnectCause cause)
+        {
+
+            Debug.LogWarningFormat("<color=#FFA500>OnDisconnected() was called by PUN with reason {0}</color>", cause);
+
         }
 
         #endregion

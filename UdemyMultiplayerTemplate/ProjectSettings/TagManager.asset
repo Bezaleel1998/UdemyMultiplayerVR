@@ -9,6 +9,9 @@ TagManager:
   - Floor
   - InputActionManager
   - XRInteractionManager
+  - schoolRoomScene
+  - outDoorScene
+  - TeleportSystemManager
   layers:
   - Default
   - TransparentFX

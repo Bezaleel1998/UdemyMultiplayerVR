@@ -29,7 +29,7 @@ public class LocalPlayerGameManager : MonoBehaviour
         {
 
             vWM = GameObject.FindGameObjectWithTag("VirtualWorldManager").GetComponent<VirtualWorldManager>();
-            goHomeButton.GetComponent<Button>().onClick.AddListener(vWM.LeaveRoomAndLoadScene);
+            goHomeButton.GetComponent<Button>().onClick.AddListener(() => vWM.LeaveRoomAndLoadScene(true));
 
         }
 

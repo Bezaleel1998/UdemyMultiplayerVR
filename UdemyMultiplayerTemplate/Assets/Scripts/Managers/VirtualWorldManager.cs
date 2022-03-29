@@ -11,19 +11,29 @@ public class VirtualWorldManager : MonoBehaviourPunCallbacks
 
     //public static VirtualWorldManager Instance { get { return _instance; } }
 
+    bool isLeavingRoom = false;
+
     #region UnityMethods
 
     private void Awake()
     {
 
         //VirtualWorldManagerInstance();
+        PhotonNetwork.AutomaticallySyncScene = true;
+        Debug.Log("You're status of leaving the room is : " + isLeavingRoom);
 
     }
 
-    public void LeaveRoomAndLoadScene()
+    public void LeaveRoomAndLoadScene(bool backToMenu)
     {
 
-        PhotonNetwork.LeaveRoom();
+        isLeavingRoom = backToMenu;
+        Debug.Log("You're status of leaving the room is : " + isLeavingRoom);
+
+        if (backToMenu)
+        {
+            PhotonNetwork.LeaveRoom();
+        }
 
     }
 
@@ -62,14 +72,24 @@ public class VirtualWorldManager : MonoBehaviourPunCallbacks
 
     public override void OnLeftRoom()
     {
-        PhotonNetwork.Disconnect();
+
+        if (isLeavingRoom)
+        {
+            PhotonNetwork.Disconnect();
+        }
+
     }
 
     public override void OnDisconnected(DisconnectCause cause)
     {
-        PhotonNetwork.LoadLevel("HomeScene");
+
+        if (isLeavingRoom)
+        {
+            PhotonNetwork.LoadLevel("HomeScene");
+        }
+
     }
 
     #endregion
-
+    
 }

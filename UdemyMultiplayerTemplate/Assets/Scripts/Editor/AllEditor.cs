@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using RoomManagerScenes;
+using PhotonPunVR.TeleportingSystem;
 
 #region LOGIN_MANAGER_EDITOR
 

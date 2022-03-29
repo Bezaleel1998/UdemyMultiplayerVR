@@ -11,6 +11,9 @@ public class LoginManager : MonoBehaviourPunCallbacks
     [Header("UISystem")]
     public TMP_InputField playerInputName;
 
+    [SerializeField]
+    private string appVersion = "1";
+
     private TouchScreenKeyboard keyboard;
 
     #region Unity Methods
@@ -48,6 +51,7 @@ public class LoginManager : MonoBehaviourPunCallbacks
         if (playerInputName != null)
         {
 
+            PhotonNetwork.GameVersion = appVersion;
             PhotonNetwork.NickName = playerInputName.text;
             PhotonNetwork.ConnectUsingSettings();
 
