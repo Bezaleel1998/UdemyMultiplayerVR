@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.SceneManagement;
 
 public class PlayerTeleportation : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class PlayerTeleportation : MonoBehaviour
     [SerializeField]
     private GameObject cloneGeneralXRPrefabs;
 
-    private int thisPlayerID;
+    private string thisPlayerID;
     [SerializeField]
     private PhotonView photonPunView;
 
@@ -20,7 +21,9 @@ public class PlayerTeleportation : MonoBehaviour
     private void Awake()
     {
 
-        thisPlayerID = photonPunView.ViewID;
+        //thisPlayerID = (string)photonPunView.ViewID;
+        thisPlayerID = PhotonNetwork.LocalPlayer.UserId;
+        Debug.Log("<color=magenta>Local Player ID : " + thisPlayerID + "</color>");
 
     }
 
@@ -28,7 +31,7 @@ public class PlayerTeleportation : MonoBehaviour
     {
 
         //Debug.Log("Something Touching player : " + other.tag);
-        if (thisPlayerID == photonPunView.ViewID)
+        if (photonPunView.IsMine == true && PhotonNetwork.IsConnected == true)
         {
             TargetTeleportScene(other.tag);
         }
@@ -63,9 +66,8 @@ public class PlayerTeleportation : MonoBehaviour
         {
             return;
         }
-
         PhotonNetwork.LoadLevel(sceneName);
-
+        PhotonNetwork.Destroy(this.cloneGeneralXRPrefabs);
     }
 
 }
